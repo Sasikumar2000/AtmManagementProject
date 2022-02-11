@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
+
 import { AddCustomerDetailsComponent } from './Admin/add-customer-details/add-customer-details.component';
 import { ViewCustomerDetailsComponent } from './Admin/view-customer-details/view-customer-details.component';
 import { NavBarComponent } from './Admin/nav-bar/nav-bar.component';
