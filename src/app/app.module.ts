@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { AddCustomerDetailsComponent } from './Admin/add-customer-details/add-customer-details.component';
 import { ViewCustomerDetailsComponent } from './Admin/view-customer-details/view-customer-details.component';
 import { NavBarComponent } from './Admin/nav-bar/nav-bar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavBarComponent } from './Admin/nav-bar/nav-bar.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
