@@ -12,6 +12,7 @@ import { NavBarComponent } from './Admin/nav-bar/nav-bar.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CustomerService } from './Services/customer.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

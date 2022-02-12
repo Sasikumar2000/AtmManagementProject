@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
   login(){
    if(this.username=="admin"&& this.password=="admin"){
-     alert("Login Success")
+    //  alert("Login Success")
      this.router.navigate(['navbar'])
    }
    else{
