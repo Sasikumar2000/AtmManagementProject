@@ -47,7 +47,12 @@
             <tr>
                 <td><label>Account Type</label></td>
                 <td>:</td>
-                <td><input type="radio" value="Savings" /><label>Savings</label><input type="radio" value="Current" /><label>Current</label></td>
+                     <td>
+                     <input type="radio" name="act-type" value="savings" required> Savings
+                     <input type="radio" name="act-type" value="current" required> Current
+                     
+                    </td>
+                    <!-- <td> <span *ngIf="customerdetailsForm.get('accounttype').touched" class="text-danger">Account Type is Required</span></td> -->
             </tr>
             <tr>
                 <td><label>Account Number</label></td>
@@ -63,7 +68,7 @@
             </tr>
         </table>
         <div>
-            <input [disabled]="customerdetailsForm.invalid" type="button" value="Add" id="btnAdd" />
+            <input [disabled]="customerdetailsForm.invalid" (click)="submit()" type="button" value="Add" id="btnAdd" />
             <input type="reset" value="Reset" id="btnReset" />
         </div>
     </form>
