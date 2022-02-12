@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Icustomer } from 'src/app/Models/icustomer';
+
 import { CustomerService } from 'src/app/Services/customer.service';
 
 @Component({
@@ -9,13 +10,15 @@ import { CustomerService } from 'src/app/Services/customer.service';
 })
 export class ViewCustomerDetailsComponent implements OnInit {
   //category: Icategory = {} as Icategory;
-   cus: Icustomer = {} as Icustomer;
-  customers:Icustomer[] = [];
+  cus: Icustomer = {} as Icustomer;
+   customers:Icustomer[] = [];
+  
   
   constructor(private customerServices: CustomerService) 
   { 
    console.log(this.cus);
     customerServices.GetCustomerDetails().subscribe((c) => { this.customers = c;});
+    console.log(this.cus.name);
     
   }
   

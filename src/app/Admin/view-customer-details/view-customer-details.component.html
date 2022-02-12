@@ -19,18 +19,23 @@
         </thead>
         <tbody >
             <tr *ngFor="let customer of customers">
-                <td>{{customer.AccountNumber}}</td>
-                <td>{{customer.Name}}</td>
-                <td>{{customer.Contact}}</td>
-                <td>{{customer.Email}}</td>
-                <td>{{customer.Address}}</td>
-                <td>{{customer.City}}</td>
-                <td>{{customer.AccountType}}</td>
-                <td>{{customer.CardNumber}}</td>
-                <td>{{customer.PinNumber}}</td>
-                <td>{{customer.Balance}}</td>
+                <td>{{customer.accountNumber}}</td>
+                <td>{{customer.name}}</td>
+                <td>{{customer.contact}}</td>
+                <td>{{customer.email}}</td>
+                <td>{{customer.address}}</td>
+                <td>{{customer.city}}</td>
+                <td>{{customer.accountType}}</td>
+                <td>{{customer.cardNumber}}</td>
+                <td>{{customer.pinNumber}}</td>
+                <td>{{customer.balance}}</td>
+
                 <td><input type="button" id="btnView" value="View"/> </td>
+                <td><input type="button" id="btnTransactiom" value="Transaction"/> </td>
+                <td><input type="button" id="btnDelete" value="Delete"/> </td>
             </tr>
         </tbody>
     </table>
+    
+       
 </div>

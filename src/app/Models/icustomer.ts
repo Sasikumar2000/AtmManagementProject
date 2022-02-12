@@ -1,13 +1,13 @@
 export interface Icustomer 
 {
-     AccountNumber : number;
-     Name : string;
-     Address : string;
-     City :string;
-     Email :string;
-     Contact :number;
-     CardNumber :number;
-     PinNumber :number;
-     AccountType : string;
-     Balance :number;
+     accountNumber:number;
+     name: string;
+     address: string;
+     city:string;
+     email:string;
+     contact:number;
+     cardNumber:number;
+     pinNumber:number;
+     accountType: string;
+     balance:number;
 }

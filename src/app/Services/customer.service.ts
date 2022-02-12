@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Icustomer } from '../Models/icustomer';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,4 +14,8 @@ export class CustomerService {
   GetCustomerDetails():Observable<Icustomer[]> {
     return this.http.get<Icustomer[]>("http://localhost:25944/api/ATM");
   }
+  SaveCustomerDetails(customer: Icustomer) {
+    return this.http.post("http://localhost:25944/api/ATM/InsertCustomer", customer);
+  }
+ 
 }
