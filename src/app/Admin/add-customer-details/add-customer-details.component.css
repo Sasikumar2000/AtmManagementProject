@@ -1,3 +1,9 @@
-.text-danger{
-    color: red;
+#divleft{
+    float: left;
+    width: 49%;
+}
+
+#divright{
+    float: right;
+    width: 49%;
 }

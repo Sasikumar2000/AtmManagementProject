@@ -1,10 +1,11 @@
 <div>
     <form [formGroup]="customerdetailsForm">
+        <div id="divleft">
         <table>
             <tr>
-                <td><label>Account Holder</label></td>
-                <td>:</td>
-                <td><input type="text" formControlName="name" placeholder="Enter a Account Holder" /></td>
+                <td><label class="text-info">Account Holder</label></td>
+                <td>:</td> 
+                <td><input type="text" class="form-control" formControlName="name" placeholder="Enter a Account Holder" /></td>
                 <td> <span *ngIf="customerdetailsForm.get('name').invalid && customerdetailsForm.get('name').touched" class="text-danger">Account Holder Name is Required</span></td>
             </tr>
             <tr>
@@ -32,6 +33,10 @@
                 <td><input type="tel" id="txtContact" formControlName="phone" placeholder="Enter Mobile Number" /></td>
                 <td> <span *ngIf="customerdetailsForm.get('phone').invalid && customerdetailsForm.get('phone').touched" class="text-danger">Address is Required</span></td>
             </tr>
+        </table>
+        </div>
+        <div id="divright" >
+            <table>
             <tr>
                 <td><label>Card Number</label></td>
                 <td>:</td>
@@ -62,6 +67,7 @@
                 <td> <span *ngIf="customerdetailsForm.get('balance').invalid && customerdetailsForm.get('balance').touched" class="text-danger">Address is Required</span></td>
             </tr>
         </table>
+        </div>
         <div>
             <input [disabled]="customerdetailsForm.invalid" type="button" value="Add" id="btnAdd" />
             <input type="reset" value="Reset" id="btnReset" />
