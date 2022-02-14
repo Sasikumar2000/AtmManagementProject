@@ -20,11 +20,7 @@ export class ViewCustomerDetailsComponent implements OnInit {
   
   constructor(private customerServices: CustomerService,private dialogRef:MatDialog) 
   { 
-   
-   console.log(this.cus);
     customerServices.GetCustomerDetails().subscribe((c) => { this.customers = c;});
-    console.log(this.cus.name);
-    
   }
   
  
@@ -38,7 +34,15 @@ export class ViewCustomerDetailsComponent implements OnInit {
   openTransaction(){
     this.dialogRef.open(TransactionComponent);
   }
+
+  DeleteCustomerDetails(accountNumber:number): void {
+ 
+    this.customerServices.RemoveCustomerDetails(accountNumber).subscribe(res => console.log(res));
+    alert("Deleted Successfully!..");
+  }
   ngOnInit(): void {
   }
 
+  
+  
 }

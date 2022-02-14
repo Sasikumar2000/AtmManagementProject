@@ -1,27 +1,67 @@
-<div>
+<div #name1>
+
+</div>
+<div id="divleft">
     <table>
         <tr>
-            <td><label>CardNumber</label></td>
+            <td><label>Account Number</label></td>
             <td>:</td>
-            <td></td>
+            <td><input type="number" id="txtAccountNumber"  [(ngModel)]="txtAccountNumber" formControlName="accountnumber" placeholder="Enter Account Number" /></td>
         </tr>
         <tr>
-            <td><label></label></td>
-            <td>:</td>
-            <td></td>
+            <td><label class="text-info">Account Holder</label></td>
+            <td>:</td> 
+            <td><input type="text" id="txtaccholder" [(ngModel)]="txtaccholder" class="form-control" formControlName="name" placeholder="Enter a Account Holder" /></td>
         </tr>
         <tr>
-            <td><label></label></td>
-            <td>:</td>
-            <td></td>
+            <td><label>Address</label></td>
+            <td>:</td>  
+            <td><textarea id="txtaddress" [(ngModel)]="txtaddress" formControlName="address"></textarea></td>
         </tr>
         <tr>
-            <td><label>PinNumber</label></td>
+            <td><label>City</label></td>
             <td>:</td>
-            <td></td>
+            <td><input type="text" id="txtcity" [(ngModel)]="txtcity" formControlName="city" placeholder="Enter City" /></td>
+            
+        </tr>
+        <tr>
+            <td><label>Email</label></td>
+            <td>:</td>
+            <td><input type="email" id="txtEmail" [(ngModel)]="txtEmail" formControlName="email" placeholder="Enter email"/></td>
+        </tr>
+        <tr>
+            <td><label>Contact</label></td>
+            <td>:</td>
+            <td><input type="number" id="txtContact" [(ngModel)]="txtContact" formControlName="phone" placeholder="Enter Mobile Number" /></td>
         </tr>
     </table>
-    <div>
-        <input type="button" id="btnBack"  value="Back" />
     </div>
-</div>
+    <div id="divright" >
+        <table>
+        <tr>
+            <td><label>Card Number</label></td>
+            <td>:</td>
+            <td><input type="number" id="txtNumber"  [(ngModel)]="txtNumber" formControlName="cardnumber" placeholder="Enter Card Number" /></td>
+        </tr>
+        <tr>
+            <td><label>Pin Number</label></td>
+            <td>:</td>
+            <td><input type="number" id="txtPinNumber"  [(ngModel)]="txtPinNumber" formControlName="pinnumber"  placeholder="Enter Pin Number" /></td>
+        </tr>
+        <tr>
+            <td><label>Account Type</label></td>
+            <td>:</td>
+                 <td>
+                 <input type="radio" name="act-type" value="savings" required> Savings
+                 <input type="radio" name="act-type" value="current" required> Current
+                 
+                </td>
+        </tr>
+       
+        <tr>
+            <td><label>Balance</label></td>
+            <td>:</td>
+            <td><input type="number" id="txtBalance" [(ngModel)]="txtBalance" formControlName="balance" placeholder="Enter a Balance" /></td>
+        </tr>
+    </table>
+    </div>
