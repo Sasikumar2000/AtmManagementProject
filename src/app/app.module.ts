@@ -18,6 +18,7 @@ import { DetailsComponent } from './Admin/view-customer-details/details/details.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogModule} from '@angular/material/dialog';
+import { FrontPageComponent } from './Admin/front-page/front-page.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { MatDialogModule} from '@angular/material/dialog';
     ViewCustomerDetailsComponent,
     NavBarComponent,
     TransactionComponent,
-    DetailsComponent
+    DetailsComponent,
+    FrontPageComponent
   ],
   imports: [
     BrowserModule,
