@@ -1,4 +1,6 @@
+import { TemplateLiteral } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { pairwise } from 'rxjs';
 import { Icustomer } from 'src/app/Models/icustomer';
 import { CustomerService } from 'src/app/Services/customer.service';
 
@@ -8,22 +10,26 @@ import { CustomerService } from 'src/app/Services/customer.service';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent implements OnInit {
+  Temp: any =  sessionStorage.getItem("accountNumber");
 
-  cus: Icustomer = {} as Icustomer;
+  AccountNumber:number = this.Temp;
 
-  txtaccholder:string="";
-  txtaddress:string="";
-  txtcity:string="";
-  txtEmail:string="";
-  txtContact:number=0;
-  txtNumber:number=0;
-  txtPinNumber:number=0;
-  txtAccountNumber:number=0;
-  txtBalance:number=0;
+  customers: Icustomer = {} as Icustomer;
+
+  //customers : Icustomer[] = [];
+  constructor(public customerServices: CustomerService) 
+  { 
+    
+    customerServices.GetCustomerDetailsByAcc(this.AccountNumber).subscribe((c) => { this.customers = c;});
+    
+  }
+ 
+   
 
   
   
   ngOnInit(): void {
+
   }
 
 }
