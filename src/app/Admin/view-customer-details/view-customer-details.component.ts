@@ -28,9 +28,18 @@ export class ViewCustomerDetailsComponent implements OnInit {
 
 
 
-  openView(){
+  openEdit(accountNumber:number){
+    sessionStorage.setItem("accountNumber",JSON.stringify(accountNumber));
     this.dialogRef.open(DetailsComponent);
-  }
+      // ,{
+      //   "width": '6000px',
+      //   "maxHeight": '90vh',
+      //   "data": "John",
+      //   "autoFocus": false
+      // });
+    }
+
+  
   openTransaction(){
     this.dialogRef.open(TransactionComponent);
   }

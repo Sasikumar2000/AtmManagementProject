@@ -8,12 +8,18 @@ import { ITransaction } from '../Models/itransaction';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CustomerService {
 
   constructor(private http :HttpClient) { console.log("DataBase Connected!..")}
 
   GetCustomerDetails():Observable<Icustomer[]> {
     return this.http.get<Icustomer[]>("http://localhost:27418/api/Customer");
+  }
+
+  GetCustomerDetailsByAcc(accountNumber:number):Observable<Icustomer> {
+    console.log(accountNumber);
+    return this.http.get<Icustomer>("http://localhost:27418/api/Customer/GetAccountNumber?AccountNumber="+accountNumber);
   }
 
   GetTransaction(accountNumber:number):Observable<ITransaction[]> {
