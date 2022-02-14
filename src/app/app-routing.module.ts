@@ -9,21 +9,23 @@ const routes: Routes =
 [
   {  path: '', redirectTo: '/login', pathMatch: 'full' },
   {  path: 'login', component: LoginComponent },
+  
   { 
     path: 'navbar',
- 
     component: NavBarComponent,
-    children: [
-    {
-       path: 'view',
-       component: ViewCustomerDetailsComponent
-    },
-    {
-    path: 'add',
-    component: AddCustomerDetailsComponent
-    }
-    ]
- }
+    // children: [
+    // {
+    //    path: 'view',
+    //    component: ViewCustomerDetailsComponent
+    // },
+    // {
+    // path: 'add',
+    // component: AddCustomerDetailsComponent
+    // }
+    // ]
+ },
+
+ {path:'addd', component: AddCustomerDetailsComponent}
 ];
 
 @NgModule({
