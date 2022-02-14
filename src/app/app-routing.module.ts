@@ -13,19 +13,19 @@ const routes: Routes =
   { 
     path: 'navbar',
     component: NavBarComponent,
-    // children: [
-    // {
-    //    path: 'view',
-    //    component: ViewCustomerDetailsComponent
-    // },
-    // {
-    // path: 'add',
-    // component: AddCustomerDetailsComponent
-    // }
-    // ]
+    children: [
+    {
+       path: 'view',
+       component: ViewCustomerDetailsComponent
+    },
+    {
+    path: 'addd',
+    component: AddCustomerDetailsComponent
+    }
+    ]
  },
 
- {path:'addd', component: AddCustomerDetailsComponent}
+//  {path:'addd', component: AddCustomerDetailsComponent}
 ];
 
 @NgModule({
