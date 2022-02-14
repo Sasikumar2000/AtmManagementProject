@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ITransaction } from 'src/app/Models/itransaction';
+import { CustomerService } from 'src/app/Services/customer.service';
 
 @Component({
   selector: 'app-transaction',
@@ -7,7 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TransactionComponent implements OnInit {
 
-  constructor() { }
+  //
+  //GetTransaction(accountNumber:number);
+  accountNumber: number = 947386752125554;
+  transaction : ITransaction[] = [];
+
+  constructor(private transactionServices: CustomerService) 
+  {
+    transactionServices.GetTransaction(this.accountNumber).subscribe((c) => { this.transaction = c;});
+   }
 
   ngOnInit(): void {
   }

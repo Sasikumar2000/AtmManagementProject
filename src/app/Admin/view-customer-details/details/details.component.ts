@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Icustomer } from 'src/app/Models/icustomer';
+import { CustomerService } from 'src/app/Services/customer.service';
 
 @Component({
   selector: 'app-details',
@@ -7,8 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailsComponent implements OnInit {
 
-  constructor() { }
+  cus: Icustomer = {} as Icustomer;
 
+  txtaccholder:string="";
+  txtaddress:string="";
+  txtcity:string="";
+  txtEmail:string="";
+  txtContact:number=0;
+  txtNumber:number=0;
+  txtPinNumber:number=0;
+  txtAccountNumber:number=0;
+  txtBalance:number=0;
+
+  
+  
   ngOnInit(): void {
   }
 

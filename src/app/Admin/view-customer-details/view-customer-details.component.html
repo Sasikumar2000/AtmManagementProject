@@ -30,9 +30,9 @@
                 <td>{{customer.pinNumber}}</td>
                 <td>{{customer.balance}}</td> -->
 
-                <td><input type="button" id="btnView" value="View" (click)="openView()"/> </td>
+                <td><input type="button" id="btnView" value="Edit" (click)="openView()"/> </td>
                 <td><input type="button" id="btnTransactiom" value="Transaction" (click)="openTransaction()"/> </td>
-                <td><input type="button" id="btnDelete" value="Delete"/> </td>
+                <td><input type="button" id="btnDelete" value="Delete" (click)="DeleteCustomerDetails(customer.accountNumber)"/> </td>
             </tr>
         </tbody>
     </table>
