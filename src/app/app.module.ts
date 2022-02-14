@@ -18,7 +18,8 @@ import { DetailsComponent } from './Admin/view-customer-details/details/details.
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatDialogModule} from '@angular/material/dialog';
-
+import { FrontPageComponent } from './Admin/front-page/front-page.component';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatDialogModule} from '@angular/material/dialog';
     ViewCustomerDetailsComponent,
     NavBarComponent,
     TransactionComponent,
-    DetailsComponent
+    DetailsComponent,
+    FrontPageComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ import { MatDialogModule} from '@angular/material/dialog';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,MatButtonModule
    
   ],
   providers: [CustomerService],

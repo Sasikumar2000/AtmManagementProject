@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Itransaction } from 'src/app/Models/itransaction';
+import { ITransaction } from 'src/app/Models/itransaction';
 import { CustomerService } from 'src/app/Services/customer.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class TransactionComponent implements OnInit {
   //
   //GetTransaction(accountNumber:number);
   accountNumber: number = 947386752125554;
-  transaction : Itransaction[] = [];
+  transaction : ITransaction[] = [];
 
   constructor(private transactionServices: CustomerService) 
   {

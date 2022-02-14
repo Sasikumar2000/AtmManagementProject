@@ -1,62 +1,43 @@
 <body>
 
-    <div class="slideshow-container">
-    
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <img src="img_nature_wide.jpg" style="width:100%">
-      <div class="text">Caption Text</div>
+  <div class="ScriptTop">
+    <div class="rt-container">
+        <div class="col-rt-4" id="float-right">
+            
+        </div>
+        
     </div>
-    
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <img src="img_snow_wide.jpg" style="width:100%">
-      <div class="text">Caption Two</div>
+</div>
+
+<!-- <header class="ScriptHeader">
+    <div class="rt-container">
+    	<div class="col-rt-12">
+        	<div class="rt-heading">
+            	<h1>Amazing Automatic Slider</h1>
+            	<h2>Build with HTML & CSS</h2>
+            </div>
+        </div>
     </div>
+</header> -->
+
+<section>
+    <div class="rt-container">
+          <div class="col-rt-12">
+            <input id="sliderSwitch" class="slider__switch" type="checkbox" name="sliderSwitch" hidden />
+            <div class="slider">
+              <ul class="slider__list">
+                <li class="slider__slide"><img id="img1" src="./assets/img/MicrosoftTeams-image (13).png" /></li>
+                <li class="slider__slide"><img id="img1" src="./assets/img/MicrosoftTeams-image (14).png" /></li>
+                <li class="slider__slide"><img id="img1" src="./assets/img/MicrosoftTeams-image (15).png" /></li>
+                <li class="slider__slide"><img id="img1" src="./assets/img/MicrosoftTeams-image (16).png" /></li>
+              </ul>
+            </div>
+            <div class="slider__control">
+              <label for="sliderSwitch"></label>
+            </div>
     
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <img src="img_mountains_wide.jpg" style="width:100%">
-      <div class="text">Caption Three</div>
+		</div>
     </div>
+</section>
     
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
     
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-    </div>
-    
-    <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-    </script>
