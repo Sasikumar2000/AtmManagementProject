@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule} from '@angular/material/dialog';
 import { FrontPageComponent } from './Admin/front-page/front-page.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule,MatButtonModule
+    MatDialogModule,MatButtonModule,MatIconModule
    
   ],
   providers: [CustomerService],

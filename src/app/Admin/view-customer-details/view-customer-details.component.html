@@ -1,7 +1,8 @@
-<body><div>
-    <label>AccountNumber : </label>
-    <input type="text" id="txtAccountNumberCheck" placeholder="Enter Account Number" />
-    <input type="button" id="btnCheck" value="View"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<body><div id="account">
+    <label >AccountNumber : </label>
+    <input type="text"  id="txtAccountNumberCheck" placeholder="Enter Account Number" />
+    <button mat-button id="btnCheck" value="View"><mat-icon>search</mat-icon></button>
 </div>
 <div id="divtab">
     <table class="table table-hover">
@@ -30,9 +31,9 @@
                 <td>{{customer.pinNumber}}</td>
                 <td>{{customer.balance}}</td> -->
 
-                <td><input type="button" id="btnView" value="Edit" (click)="openEdit(customer.accountNumber)"/> </td>
-                <td><input type="button" id="btnTransactiom" value="Transaction" (click)="openTransaction()"/> </td>
-                <td><input type="button" id="btnDelete" value="Delete" (click)="DeleteCustomerDetails(customer.accountNumber)"/> </td>
+                <td><button mat-button id="btnView" value="Edit" (click)="openEdit(customer.accountNumber)"><mat-icon>edit</mat-icon></button> </td>
+                <td><button mat-button id="btnTransactiom" value="Transaction" (click)="openTransaction()"><mat-icon>credit_card</mat-icon></button> </td>
+                <td><button mat-button id="btnDelete" value="Delete" (click)="DeleteCustomerDetails(customer.accountNumber)"><mat-icon>delete</mat-icon></button> </td>
             </tr>
         </tbody>
     </table>
