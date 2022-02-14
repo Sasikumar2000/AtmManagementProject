@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CustomerService } from './Services/customer.service';
 import { TransactionComponent } from './Admin/view-customer-details/transaction/transaction.component';
 import { DetailsComponent } from './Admin/view-customer-details/details/details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -32,7 +35,10 @@ import { DetailsComponent } from './Admin/view-customer-details/details/details.
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatDialogModule
+   
   ],
   providers: [CustomerService],
   bootstrap: [AppComponent]

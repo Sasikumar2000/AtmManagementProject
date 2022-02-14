@@ -3,7 +3,7 @@
     <input type="text" id="txtAccountNumberCheck" placeholder="Enter Account Number" />
     <input type="button" id="btnCheck" value="View"/>
 </div>
-<div>
+<div id="divtab">
     <table class="table table-hover">
         <thead>
             <th>AccountNumber</th>
@@ -13,9 +13,9 @@
             <th>Address</th>
             <th>City</th>
             <th>AccountType</th>
-            <th>CardNumber</th>
-            <th>PinNumber</th>
-            <th>Balance</th>
+            <th>View</th>
+            <th>Transaction</th>
+            <th>Delete</th>
         </thead>
         <tbody >
             <tr *ngFor="let customer of customers">
@@ -26,12 +26,12 @@
                 <td>{{customer.address}}</td>
                 <td>{{customer.city}}</td>
                 <td>{{customer.accountType}}</td>
-                <td>{{customer.cardNumber}}</td>
+                <!-- <td>{{customer.cardNumber}}</td>
                 <td>{{customer.pinNumber}}</td>
-                <td>{{customer.balance}}</td>
+                <td>{{customer.balance}}</td> -->
 
-                <td><input type="button" id="btnView" value="View"/> </td>
-                <td><input type="button" id="btnTransactiom" value="Transaction"/> </td>
+                <td><input type="button" id="btnView" value="View" (click)="openView()"/> </td>
+                <td><input type="button" id="btnTransactiom" value="Transaction" (click)="openTransaction()"/> </td>
                 <td><input type="button" id="btnDelete" value="Delete"/> </td>
             </tr>
         </tbody>
