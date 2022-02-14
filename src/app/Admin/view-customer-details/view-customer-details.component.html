@@ -1,8 +1,8 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <body><div id="account">
     <label >AccountNumber : </label>
-    <input type="text"  id="txtAccountNumberCheck" placeholder="Enter Account Number" />
-    <button mat-button id="btnCheck" value="View"><mat-icon>search</mat-icon></button>
+    <input type="text"  id="txtAccountNumberCheck" [(ngModel)]="accno" placeholder="Enter Account Number" />
+    <button mat-button id="btnCheck" value="View"><mat-icon (click)="search()">search</mat-icon></button>
 </div>
 <div id="divtab">
     <table class="table table-hover">
@@ -14,7 +14,7 @@
             <th>Address</th>
             <th>City</th>
             <th>AccountType</th>
-            <th>View</th>
+            <th>Edit</th>
             <th>Transaction</th>
             <th>Delete</th>
         </thead>
@@ -32,7 +32,7 @@
                 <td>{{customer.balance}}</td> -->
 
                 <td><button mat-button id="btnView" value="Edit" (click)="openEdit(customer.accountNumber)"><mat-icon>edit</mat-icon></button> </td>
-                <td><button mat-button id="btnTransactiom" value="Transaction" (click)="openTransaction()"><mat-icon>credit_card</mat-icon></button> </td>
+                <td><button mat-button id="btnTransactiom" value="Transaction" (click)="openTransaction(customer.accountNumber)"><mat-icon>credit_card</mat-icon></button> </td>
                 <td><button mat-button id="btnDelete" value="Delete" (click)="DeleteCustomerDetails(customer.accountNumber)"><mat-icon>delete</mat-icon></button> </td>
             </tr>
         </tbody>

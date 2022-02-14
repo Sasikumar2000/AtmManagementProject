@@ -9,8 +9,8 @@
             <th>Transaction Time</th>
             <th>Balance</th>
         </thead>
-       <tbody>
-           <tr *ngFor="let Transaction of transaction">
+       <tbody *ngFor="let Transaction of transaction">
+           <tr>
                <td>{{Transaction.accountNumber}}</td>
                <td>{{Transaction.transactionId}}</td>
                <td>{{Transaction.credited}}</td>

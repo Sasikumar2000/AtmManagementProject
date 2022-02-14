@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { ITransaction } from 'src/app/Models/itransaction';
 import { CustomerService } from 'src/app/Services/customer.service';
 
@@ -9,14 +10,15 @@ import { CustomerService } from 'src/app/Services/customer.service';
 })
 export class TransactionComponent implements OnInit {
 
+  temp: any = sessionStorage.getItem("txtaccountNumber");
   //
   //GetTransaction(accountNumber:number);
-  accountNumber: number = 947386752125554;
+  accountNumber1: number = this.temp;
   transaction : ITransaction[] = [];
 
   constructor(private transactionServices: CustomerService) 
   {
-    transactionServices.GetTransaction(this.accountNumber).subscribe((c) => { this.transaction = c;});
+    transactionServices.GetTransaction(this.accountNumber1).subscribe((c) => { this.transaction = c});
    }
 
   ngOnInit(): void {

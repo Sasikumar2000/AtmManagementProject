@@ -12,7 +12,7 @@ import { CustomerService } from 'src/app/Services/customer.service';
 export class DetailsComponent implements OnInit {
   Temp: any =  sessionStorage.getItem("accountNumber");
 
-  AccountNumber:number = this.Temp;
+  AccountNumber:number = parseInt(this.Temp);
 
   customers: Icustomer = {} as Icustomer;
 
@@ -24,7 +24,24 @@ export class DetailsComponent implements OnInit {
     
   }
  
+  UpdateDetail(): void {
+
+    this.customers.accountNumber= this.AccountNumber;
+    this.customers.name = this.customers.name;
+    this.customers.address = this.customers.address;
+    this.customers.city = this.customers.city;
+    this.customers.email = this.customers.email;
+    this.customers.contact = this.customers.contact;
+    this.customers.cardNumber = this.customers.cardNumber;
+    this.customers.pinNumber = this.customers.pinNumber;
+    this.customers.accountType = this.customers.accountType;
+    this.customers.balance = this.customers.balance;
+
    
+
+    this.customerServices.UpdateCustomerDetails(this.customers).subscribe(res => { console.log(res); });
+    alert("Updated Successfully...");
+  }
 
   
   

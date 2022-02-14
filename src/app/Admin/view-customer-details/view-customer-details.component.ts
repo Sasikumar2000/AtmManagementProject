@@ -44,7 +44,8 @@ export class ViewCustomerDetailsComponent implements OnInit {
     }
 
   
-  openTransaction(){
+  openTransaction(accountNumber:number){
+    sessionStorage.setItem("txtaccountNumber",JSON.stringify(accountNumber));
     this.dialogRef.open(TransactionComponent);
   }
 
@@ -53,6 +54,14 @@ export class ViewCustomerDetailsComponent implements OnInit {
     this.customerServices.RemoveCustomerDetails(accountNumber).subscribe(res => console.log(res));
     alert("Deleted Successfully!..");
   }
+accno : string ="";
+search()
+{
+
+  sessionStorage.setItem("accountNumber",this.accno);
+  this.dialogRef.open(DetailsComponent);
+}
+
   ngOnInit(): void {
   }
 
