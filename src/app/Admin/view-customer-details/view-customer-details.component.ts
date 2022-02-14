@@ -7,6 +7,7 @@ import { DetailsComponent } from './details/details.component';
 import { CustomerService } from 'src/app/Services/customer.service';
 import { TransactionComponent } from './transaction/transaction.component';
 
+
 @Component({
   selector: 'app-view-customer-details',
   templateUrl: './view-customer-details.component.html',
@@ -14,13 +15,16 @@ import { TransactionComponent } from './transaction/transaction.component';
 })
 export class ViewCustomerDetailsComponent implements OnInit {
   //category: Icategory = {} as Icategory;
+  
+  
   cus: Icustomer = {} as Icustomer;
    customers:Icustomer[] = [];
+   
   
-  
-  constructor(private customerServices: CustomerService,private dialogRef:MatDialog) 
+  constructor(private customerServices: CustomerService,private dialogRef:MatDialog,) 
   { 
     customerServices.GetCustomerDetails().subscribe((c) => { this.customers = c;});
+
   }
   
  

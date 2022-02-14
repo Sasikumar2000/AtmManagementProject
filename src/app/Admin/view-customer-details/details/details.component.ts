@@ -23,24 +23,8 @@ export class DetailsComponent implements OnInit {
     customerServices.GetCustomerDetailsByAcc(this.AccountNumber).subscribe((c) => { this.customers = c;});
     
   }
-  
-   
-  txtaccholder:any=this.customers.name;
-  txtaddress:any=this.customers.address;
-  txtcity:any=this.customers.city;
-  txtEmail:any=this.customers.email;
-  txtContact:any=this.customers.contact;
-  txtNumber:any=this.customers.cardNumber;
-  txtPinNumber:any=this.customers.pinNumber;
-  txtAccountNumber:any=this.customers.accountNumber;
-  txtBalance:any=this.customers.balance;
-  
  
-
-  test(){
-    console.log(this.customers.name);
-  }
-
+   
 
   
   
