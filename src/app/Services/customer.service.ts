@@ -36,6 +36,11 @@ export class CustomerService {
   SaveCustomerDetails(customer: Icustomer) {
     return this.http.post("http://localhost:27418/api/Customer/InsertCustomer", customer);
   }
+  //http://localhost:27418/api/AdminLongin/GetLoginCredential
+  InsertLoginCredential(adminLogin:IAdminLongin){
+    return this.http.post("http://localhost:27418/api/AdminLongin/InsertLoginCredential", adminLogin);
+ 
+  }
  
   UpdateCustomerDetails(customer:Icustomer) {
 
