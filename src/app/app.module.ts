@@ -20,7 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule} from '@angular/material/dialog';
 import { FrontPageComponent } from './Admin/front-page/front-page.component';
 import {MatButtonModule} from '@angular/material/button';
-import {MatIconModule} from '@angular/material/icon'
+import {MatIconModule} from '@angular/material/icon';
+import { RegisterComponent } from './register/register.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import {MatIconModule} from '@angular/material/icon'
     NavBarComponent,
     TransactionComponent,
     DetailsComponent,
-    FrontPageComponent
+    FrontPageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

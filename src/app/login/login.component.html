@@ -17,7 +17,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">Password:</label><br>
-                                <input type="password" name="password" id="password" [(ngModel)]="password"
+                                <input type="password" name="passWord" id="passWord" [(ngModel)]="passWord"
                                     formControlName="password" class="form-control">
                                 <!-- <span *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched" class="text-danger">Password is Required</span> -->
                             </div>
@@ -29,7 +29,7 @@
                                 <!-- routerLink="/navbar" routerLinkActive="active" -->
                             </div>
                             <div id="register-link" class="text-right">
-                                <a href="#" class="text-info">Register here</a>
+                                <a  routerLink="/register" routerLinkActive="active" class="text-info">Register here</a>
                             </div>
                         </form>
                     </div>

@@ -5,11 +5,13 @@ import { FrontPageComponent } from './Admin/front-page/front-page.component';
 import { NavBarComponent } from './Admin/nav-bar/nav-bar.component';
 import { ViewCustomerDetailsComponent } from './Admin/view-customer-details/view-customer-details.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const routes: Routes = 
 [
   {  path: '', redirectTo: '/login', pathMatch: 'full' },
   {  path: 'login', component: LoginComponent },
+  {  path: 'register', component: RegisterComponent },
   
   { 
     path: 'navbar',

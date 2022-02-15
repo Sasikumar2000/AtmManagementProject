@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Icustomer } from '../Models/icustomer';
+import { IAdminLongin } from '../Models/iadmin-longin';
 // import { ITransaction } from '../Models/itransaction';
 
 
@@ -14,6 +15,10 @@ import { Icustomer } from '../Models/icustomer';
 export class CustomerService {
 
   constructor(private http :HttpClient) { console.log("DataBase Connected!..")}
+  //http://localhost:27418/api/AdminLongin/GetLoginCredential
+  GetLoginCredential():Observable<IAdminLongin[]> {
+    return this.http.get<IAdminLongin[]>("http://localhost:27418/api/AdminLongin/GetLoginCredential");
+  }
 
   GetCustomerDetails():Observable<Icustomer[]> {
     return this.http.get<Icustomer[]>("http://localhost:27418/api/Customer");
