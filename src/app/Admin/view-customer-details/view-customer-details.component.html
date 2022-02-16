@@ -1,8 +1,11 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-<body><div id="account">
+<body>
+    <h2 class="text-center txt pt-3">{{msg}}</h2>
+    <div id="account">
     <label >AccountNumber : </label>
     <input type="text"  id="txtAccountNumberCheck" [(ngModel)]="accno" placeholder="Enter Account Number" />
-    <button mat-button id="btnCheck" value="View"><mat-icon (click)="search()">search</mat-icon></button>
+    <button mat-button id="btnCheck"  (click)="search()" value="View"><mat-icon>search</mat-icon></button>
+    
 </div>
 <div id="divtab">
     <table class="table table-hover">

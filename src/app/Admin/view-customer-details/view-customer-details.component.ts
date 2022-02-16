@@ -55,6 +55,8 @@ export class ViewCustomerDetailsComponent implements OnInit {
     alert("Deleted Successfully!..");
   }
 accno : string ="";
+msg: string = "";
+
 search()
 {
  if(this.accno != "")
@@ -63,7 +65,7 @@ search()
   this.dialogRef.open(DetailsComponent);
  }
  else{
-   alert("no acc no");
+   this.msg = "Enter account Number"
  }
 }
 

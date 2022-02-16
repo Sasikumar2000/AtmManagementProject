@@ -5,7 +5,15 @@ ul {
     overflow: hidden;
     background-color: #333;
   }
-  
+  .heading{
+    color: aliceblue;
+    padding-top: 13px;
+    margin-left: 450px;
+    font-weight: bolder;
+    font-size: large;
+    font-family: "Segoe Print", serif;
+  }
+
   li {
     float: left;
   }

@@ -1,6 +1,11 @@
 .divtab{
     margin: 30px;
 }
+
+.txt{
+    color: red;
+}
+
 body{
     background-color: rgb(211, 205, 205);
   
