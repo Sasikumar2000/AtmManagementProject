@@ -1,18 +1,48 @@
+body{
+  background-color: lightblue;  
+}
+.textsty1{
+  font-family: "Lucida Sans";
+  color: hotpink;
+  font-weight: bolder;
+}
+
+.textsty{
+  font-family: "Segoe Print", serif;
+  color: hsl(342, 73%, 63%);
+  font-weight: bold;
+}
+
+
+
+h2{
+  color: red;
+}
+
+label{
+  width: 100px;
+  display: inline-block;
+}
 .container {  
-      padding: 50px;  
+    
     background-color: lightblue;  
+    width: 100%;
+   
   }  
     
   input[type=text], input[type=password], textarea {  
-    width: 100%;  
+    width: 200px; 
+    height: 30px;
     padding: 15px;  
-    margin: 5px 0 22px 0;  
+    margin: 10px 0 22px 0;  
     display: inline-block;  
     border: none;  
     background: #f1f1f1;  
+    border-radius: 15px;
   }  
   input[type=text]:focus, input[type=password]:focus {  
-    background-color: orange;  
+     
+    background-color: rgb(238, 206, 146);  
     outline: none;  
   }  
    div {  
@@ -22,16 +52,42 @@
     border: 1px solid #f1f1f1;  
     margin-bottom: 25px;  
   }  
-  .registerbtn {  
+  .leftregisterbtn {  
     background-color: #4CAF50;  
     color: white;  
-    padding: 16px 20px;  
-    margin: 8px 0;  
+    padding: 5px 20px;  
+    margin: 8px; 
+    margin-left: 430px; 
     border: none;  
     cursor: pointer;  
-    width: 100%;  
+    width: 10%;  
     opacity: 0.9;  
+    border-radius: 15px;
+    height: 40px;
   }  
-  .registerbtn:hover {  
-    opacity: 1;  
+
+  .rightregisterbtn{
+    background-color: #4CAF50;  
+    color: white;  
+    padding: 5px 20px;  
+    margin: 8px; 
+    margin-left: 50px; 
+    border: none;  
+    cursor: pointer;  
+    width: 10%;  
+    opacity: 0.9;  
+    border-radius: 15px;
+    height: 40px;
+  }
+  .leftregisterbtn:hover {  
+    opacity: 0.6;  
+    background-color: rgb(19, 223, 111);
+  }
+
+  .rightregisterbtn:hover {  
+    opacity: 0.6;  
+    background-color: rgb(19, 223, 111);
+  }
+  table{
+    margin: auto;
   }

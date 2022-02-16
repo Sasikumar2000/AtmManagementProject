@@ -57,9 +57,14 @@ export class ViewCustomerDetailsComponent implements OnInit {
 accno : string ="";
 search()
 {
-
+ if(this.accno != "")
+ {
   sessionStorage.setItem("accountNumber",this.accno);
   this.dialogRef.open(DetailsComponent);
+ }
+ else{
+   alert("no acc no");
+ }
 }
 
   ngOnInit(): void {

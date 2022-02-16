@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
       password:['']
     })
   }
+  alert:string="";
   count:number=0;
   login(){
     //console.log(this.count);
@@ -59,7 +60,7 @@ export class LoginComponent implements OnInit {
     //console.log(this.count);
    if(this.count == 0)
    {
-     alert("User Not Found");
+    this.alert = "User or Password invaild";
    }
   }
 
