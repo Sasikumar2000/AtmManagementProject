@@ -57,5 +57,16 @@ export class AddCustomerDetailsComponent implements OnInit {
     this.customerService.SaveCustomerDetails(this.cus).subscribe(res => { console.log(res); });
     alert("Submitted Successfully");
   }
+  Reset(){
+    this.txtaccholder="";
+    this.txtaddress="";
+    this.txtcity="";
+    this.txtEmail="";
+    this.txtAccountNumber=0;
+    this.txtNumber=0;
+    this.txtPinNumber=0;
+    this.txtBalance=0;
+    this.txtContact=0;
+  }
 
 }

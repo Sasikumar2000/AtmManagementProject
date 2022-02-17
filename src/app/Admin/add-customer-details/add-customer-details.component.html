@@ -40,7 +40,7 @@
                 <td>:</td>
                 <td><input type="number" id="txtContact" class="form-control" [(ngModel)]="txtContact" formControlName="phone" placeholder="Enter Mobile Number" /></td></tr>
                 <tr><td></td><td></td> 
-                <td> <span *ngIf="customerdetailsForm.get('phone').invalid && customerdetailsForm.get('phone').touched" class="text-danger">Address is Required</span></td>
+                <td> <span *ngIf="customerdetailsForm.get('phone').invalid && customerdetailsForm.get('phone').touched" class="text-danger">Contact is Required</span></td>
             </tr>
         </table>
         </div>
@@ -52,14 +52,14 @@
                 <td>:</td>
                 <td><input type="number" id="txtNumber" class="form-control" [(ngModel)]="txtNumber" formControlName="cardnumber" placeholder="Enter Card Number" /></td></tr>
                 <tr><td></td><td></td> 
-                <td> <span *ngIf="customerdetailsForm.get('cardnumber').invalid && customerdetailsForm.get('cardnumber').touched" class="text-danger">Address is Required</span></td>
+                <td> <span *ngIf="customerdetailsForm.get('cardnumber').invalid && customerdetailsForm.get('cardnumber').touched" class="text-danger">Card Number is Required</span></td>
             </tr>
             <tr>
                 <td><label>Pin Number</label></td>
                 <td>:</td>
                 <td><input type="number" id="txtPinNumber" class="form-control" [(ngModel)]="txtPinNumber" formControlName="pinnumber"  placeholder="Enter Pin Number" /></td></tr>
                 <tr><td></td><td></td> 
-                <td> <span *ngIf="customerdetailsForm.get('pinnumber').invalid && customerdetailsForm.get('pinnumber').touched" class="text-danger">Address is Required</span></td>
+                <td> <span *ngIf="customerdetailsForm.get('pinnumber').invalid && customerdetailsForm.get('pinnumber').touched" class="text-danger">Pin Number is Required</span></td>
             </tr>
             <tr>
                 <td><label>Account Type</label></td>
@@ -76,14 +76,14 @@
                 <td>:</td>
                 <td><input type="number" id="txtAccountNumber" class="form-control"  [(ngModel)]="txtAccountNumber" formControlName="accountnumber" placeholder="Enter Account Number" /></td></tr>
                 <tr><td></td><td></td> 
-                <td> <span *ngIf="customerdetailsForm.get('accountnumber').invalid && customerdetailsForm.get('accountnumber').touched" class="text-danger">Address is Required</span></td>
+                <td> <span *ngIf="customerdetailsForm.get('accountnumber').invalid && customerdetailsForm.get('accountnumber').touched" class="text-danger">Account Number is Required</span></td>
             </tr>
             <tr>
                 <td><label>Balance</label></td>
                 <td>:</td>
                 <td><input type="number" id="txtBalance" class="form-control" [(ngModel)]="txtBalance" formControlName="balance" placeholder="Enter a Balance" /></td></tr>
                 <tr><td></td><td></td> 
-                <td> <span *ngIf="customerdetailsForm.get('balance').invalid && customerdetailsForm.get('balance').touched" class="text-danger">Address is Required</span></td>
+                <td> <span *ngIf="customerdetailsForm.get('balance').invalid && customerdetailsForm.get('balance').touched" class="text-danger">Balance is Required</span></td>
             </tr>
         </table>
     </div>
@@ -94,5 +94,5 @@
 <div id="buttonn">
 <button id="button1" mat-raised-button [disabled]="customerdetailsForm.invalid" (click)="submit()" type="button" value="Add" id="btnAdd" >Add</button>
 <!-- <input type="reset" value="Reset" id="btnReset" /> -->
-<button mat-raised-button  value="Reset" id="btnReset">Reset</button></div>
+<button mat-raised-button  value="Reset" (click)="Reset()" id="btnReset">Reset</button></div>
 </body>
