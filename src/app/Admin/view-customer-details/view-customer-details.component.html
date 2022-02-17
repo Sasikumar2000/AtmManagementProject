@@ -3,7 +3,7 @@
     <h2 class="text-center txt pt-3">{{msg}}</h2>
     <div id="account">
     <label >AccountNumber : </label>
-    <input type="text"  id="txtAccountNumberCheck" [(ngModel)]="accno" placeholder="Enter Account Number" />
+    <input type="text"  id="txtAccountNumberCheck"  [(ngModel)]="accountnumbersearch" (ngModelChange)="accountnumbersearch" placeholder="Enter Your AccountNumber" />
     <button mat-button id="btnCheck"  (click)="search()" value="View"><mat-icon>search</mat-icon></button>
     
 </div>

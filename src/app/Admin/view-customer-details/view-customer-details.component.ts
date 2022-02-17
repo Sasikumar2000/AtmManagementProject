@@ -35,12 +35,7 @@ export class ViewCustomerDetailsComponent implements OnInit {
   openEdit(accountNumber:number){
     sessionStorage.setItem("accountNumber",JSON.stringify(accountNumber));
     this.dialogRef.open(DetailsComponent);
-      // ,{
-      //   "width": '6000px',
-      //   "maxHeight": '90vh',
-      //   "data": "John",
-      //   "autoFocus": false
-      // });
+ 
     }
 
   
@@ -54,24 +49,41 @@ export class ViewCustomerDetailsComponent implements OnInit {
     this.customerServices.RemoveCustomerDetails(accountNumber).subscribe(res => console.log(res));
     alert("Deleted Successfully!..");
   }
-accno : string ="";
-msg: string = "";
 
-search()
-{
- if(this.accno != "")
- {
-  sessionStorage.setItem("accountNumber",this.accno);
-  this.dialogRef.open(DetailsComponent);
- }
- else{
-   this.msg = "Enter account Number"
- }
-}
+msg: string = "";
+accountnumbersearch:string="";
+valuecheck:Array<any>=[];
+
+
+
 
   ngOnInit(): void {
   }
 
+  search()
+  {this.ngOnInit();
+  
+   if(this.accountnumbersearch != ""){
+   
+      this.valuecheck=this.customers.filter(res=>{
+        return res.accountNumber.toString().match(this.accountnumbersearch);
+        
+       
+      })
+      if(this.valuecheck.length !=0){
+      
+        this.customers=this.valuecheck;
+      }
+      else{
+        this.msg = "Enter Valid Account Number"
+        
+      }
+   }
+   
+   else{
+    this.msg = "Enter account Number"
+   }
+  }
   
   
 }
