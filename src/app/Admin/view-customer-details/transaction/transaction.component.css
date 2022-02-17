@@ -1,3 +1,9 @@
+.txtmsg{
+    color: red;
+    font-weight: bold;
+    padding: 10px;
+}
+
 thead,th{
     background-color: darkgreen;
     color: snow;

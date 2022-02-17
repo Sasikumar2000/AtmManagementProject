@@ -8,20 +8,24 @@ import { CustomerService } from 'src/app/Services/customer.service';
   templateUrl: './transaction.component.html',
   styleUrls: ['./transaction.component.css']
 })
-export class TransactionComponent implements OnInit {
+export class TransactionComponent implements OnInit{
 
   temp: any = sessionStorage.getItem("txtaccountNumber");
   //
   //GetTransaction(accountNumber:number);
   accountNumber1: number = this.temp;
   transaction : ITransaction[] = [];
-
+  msg:string="";
   constructor(private transactionServices: CustomerService) 
   {
     transactionServices.GetTransaction(this.accountNumber1).subscribe((c) => { this.transaction = c});
+    
    }
 
+
   ngOnInit(): void {
+  
   }
+  
 
 }

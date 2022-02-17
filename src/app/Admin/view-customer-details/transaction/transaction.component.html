@@ -1,5 +1,7 @@
 <body>
+
 <div>
+   
     <table class="table table-hover table-bordered">
         <thead>
             <th>Account Number</th>
@@ -9,15 +11,21 @@
             <th>Transaction Time</th>
             <th>Balance</th>
         </thead>
-       <tbody *ngFor="let Transaction of transaction">
-           <tr>
+
+   
+       <tbody *ngIf="transaction.length != 0">
+           <tr *ngFor="let Transaction of transaction">
                <td>{{Transaction.accountNumber}}</td>
                <td>{{Transaction.transactionId}}</td>
                <td>{{Transaction.credited}}</td>
                <td>{{Transaction.debited}}</td>
                <td>{{Transaction.transactionTime}}</td>
                <td>{{Transaction.balance}}</td>
+
            </tr>
+          
        </tbody>
     </table>
-</div></body>
+    <h1 class="text-center txtmsg" *ngIf="transaction.length == 0">No Data Found</h1>
+</div>
+</body>
