@@ -10,14 +10,9 @@ body{
   
 }
 
-/* 
-#divright{
-    /* float: right;
-    width: 29%; */
-    /* margin-top: 100px; 
-} */
+
 #divri{
-    /* margin-top: 100px; */
+    
     padding-top: 80px;
 }
 #buttonn{
@@ -27,8 +22,6 @@ body{
 }
 table{
     margin-top: 0px;
-    
-     /* padding-bottom: 200px; */
 }
 #btnReset{
     color: rgb(0, 0, 0);
@@ -41,4 +34,19 @@ table{
     margin-left: 600px;
    
    
+}
+
+.mat-option {
+  padding-left: 20px;
+  background-color:aqua;
+}
+
+.mat-option:hover {
+  padding-left: 25px;
+  background-color:aquamarine;
+}
+
+.mat-select {
+  padding-left: 20px;
+  background-color:snow;
 }

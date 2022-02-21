@@ -27,7 +27,7 @@ const routes: Routes =
        component: ViewCustomerDetailsComponent
     },
     {
-    path: 'addd',
+    path: 'add',
     component: AddCustomerDetailsComponent
     }
     ]

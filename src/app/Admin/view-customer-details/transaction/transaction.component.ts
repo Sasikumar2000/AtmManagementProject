@@ -11,16 +11,15 @@ import { CustomerService } from 'src/app/Services/customer.service';
 export class TransactionComponent implements OnInit{
 
   temp: any = sessionStorage.getItem("txtaccountNumber");
-  //
-  //GetTransaction(accountNumber:number);
+  
   accountNumber1: number = this.temp;
   transaction : ITransaction[] = [];
-  msg:string="";
+  
   constructor(private transactionServices: CustomerService) 
   {
     transactionServices.GetTransaction(this.accountNumber1).subscribe((c) => { this.transaction = c});
     
-   }
+  }
 
 
   ngOnInit(): void {

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { MatSelectChange } from '@angular/material/select';
 import { Icustomer } from 'src/app/Models/icustomer';
 import { CustomerService } from 'src/app/Services/customer.service';
 
@@ -24,7 +26,7 @@ export class AddCustomerDetailsComponent implements OnInit {
   txtAccountNumber:number=0;
   txtBalance:number=0;
   
-  constructor(private customerService: CustomerService){}
+  constructor(private customerService: CustomerService,private dialog: MatDialog){}
   ngOnInit() {
     this.customerdetailsForm = new FormGroup({
       name: new FormControl(null, Validators.required),
@@ -48,7 +50,7 @@ export class AddCustomerDetailsComponent implements OnInit {
     this.cus.city = this.txtcity;
     this.cus.email = this.txtEmail;
     this.cus.accountNumber = this.txtAccountNumber;
-    this.cus.accountType = "Savings";
+    this.cus.accountType = this.selectedtype;
     this.cus.cardNumber = this.txtNumber;
     this.cus.pinNumber = this.txtPinNumber;
     this.cus.balance=this.txtBalance;
@@ -69,4 +71,10 @@ export class AddCustomerDetailsComponent implements OnInit {
     this.txtContact=0;
   }
 
+  selectedtype:string="";
+
+  selected() {
+    console.log(this.selectedtype);
+    
+  }
 }

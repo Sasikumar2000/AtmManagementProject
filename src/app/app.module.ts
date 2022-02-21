@@ -21,7 +21,9 @@ import { MatDialogModule} from '@angular/material/dialog';
 import { FrontPageComponent } from './Admin/front-page/front-page.component';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
-import { RegisterComponent } from './register/register.component'
+import { RegisterComponent } from './register/register.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { RegisterComponent } from './register/register.component'
     DetailsComponent,
     FrontPageComponent,
     RegisterComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,10 @@ import { RegisterComponent } from './register/register.component'
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatDialogModule,MatButtonModule,MatIconModule
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSelectModule
    
   ],
   providers: [CustomerService],

@@ -61,7 +61,7 @@ valuecheck:Array<any>=[];
   }
 
   search()
-  {this.ngOnInit();
+  {
   
    if(this.accountnumbersearch != ""){
    

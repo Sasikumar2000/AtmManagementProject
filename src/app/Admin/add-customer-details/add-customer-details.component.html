@@ -65,11 +65,13 @@
                 <td><label>Account Type</label></td>
                 <td>:</td>
                      <td>
-                     <input type="radio" name="act-type" value="savings" required> Savings
-                     <input type="radio" name="act-type" value="current" required> Current
-                     
+                    
+                     <mat-select placeholder="Select Account Type"   [(value)]="selectedtype" id="accounttype" name="accounttype"(selectionChange)="selected()">
+                     <mat-option id="opt1" Class="form-control" name="opt1" value="Savings" >Savings</mat-option>
+                     <mat-option id="opt2" name="opt2" value="Current" >Current</mat-option>
+                    </mat-select>
+                      
                     </td>
-                    <!-- <td> <span *ngIf="customerdetailsForm.get('accounttype').touched" class="text-danger">Account Type is Required</span></td> -->
             </tr>
             <tr>
                 <td><label>Account Number</label></td>
@@ -92,7 +94,7 @@
     </form>
 </div>
 <div id="buttonn">
-<button id="button1" mat-raised-button [disabled]="customerdetailsForm.invalid" (click)="submit()" type="button" value="Add" id="btnAdd" >Add</button>
-<!-- <input type="reset" value="Reset" id="btnReset" /> -->
+<button  mat-raised-button [disabled]="customerdetailsForm.invalid" (click)="submit()" type="button" value="Add" id="btnAdd" >Add</button>
+
 <button mat-raised-button  value="Reset" (click)="Reset()" id="btnReset">Reset</button></div>
 </body>

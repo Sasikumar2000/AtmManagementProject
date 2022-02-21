@@ -14,7 +14,7 @@ import { IAdminLongin } from '../Models/iadmin-longin';
 
 export class CustomerService {
 
-  url:string = "http://localhost:27418/api/";
+  url: string = "http://localhost:5000/api/";
 
 
   constructor(private http :HttpClient) { console.log("DataBase Connected!..")}
